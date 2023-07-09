@@ -20,7 +20,7 @@ def home():
     if request.method == 'POST':
         prompt = request.form['prompt']
         response_text = generate_response(prompt)
-        return render_template('index.html', response_text=response_text)
+        return render_template('index.html', response=response_text)
     return render_template('index.html')
 
 if __name__ == '__main__':
